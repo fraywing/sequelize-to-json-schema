@@ -13,7 +13,7 @@ function modelFactory(name, attributes) {
 
 	_.forEach(attributes, (value, attr) => {
 		const attribute = _.isString(value) ? { key: value } : value;
-		model.attributes[attr] = { type: attribute };
+		model.rawAttributes[attr] = { type: attribute };
 	});
 
 	models[name] = model;
